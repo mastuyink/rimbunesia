@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "177b33f0-d66a-40a8-93c3-0a41773dff14",
+		"name": "Rimbunesia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TEST",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"social_id\"       : \"Kllasgter7sdbcvof854\",\n    \"social_medias\"   : \"FACEBOOK\",\n    \"email\"           : \"mail@mail.com\",\n    \"phone_number\"    : \"628278906475\",\n    \"full_name\"       : \"NAME OF USER\",\n    \"age\"             : 5,\n    \"gender\"          : \"M\",\n    \"password\"        : \"somescreetpassword\",\n    \"password_confirm\": \"somescreetpassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/rimbunesia/web/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rimbunesia",
+						"web",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TEST",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\"     : \"628278906475\",\n    \"password\"         : \"somescreetpassword\",\n    \"emails\"           : \"mail@mail.com\",\n    \"social_ids\"       : \"randomSocialid6789\",\n    \"social_medias\"    : \"FACEBOOK\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/rimbunesia/web/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rimbunesia",
+						"web",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -38,16 +38,16 @@ I have been created simple backed (without login) to disable and enabled user, i
 
   **1. Via Form**
 
-     **Request Attribute**
-  
-  | Name         | Type   | Required | Description                                                  |
-  | ------------ | ------ | -------- | ------------------------------------------------------------ |
+   **Request Attribute**
+
+| Name         | Type   | Required | Description                                                  |
+| ------------ | ------ | -------- | ------------------------------------------------------------ |
 | phone_number | string | Y        | min 6 digit, max, 25 digit, allowed value between **1-9** or **٩-٠** , both combination and spaces are not allowed |
-  | password     | string | Y        | -                                                            |
+| password     | string | Y        | -                                                            |
 
-     **Response**
+   **Response**
 
-  api will send access token if login successfully or show error if any input invalid  
+api will send access token if login successfully or show error if any input invalid  
 
   **2. Via Social Media**
 
@@ -61,12 +61,11 @@ I have been created simple backed (without login) to disable and enabled user, i
 | social_id    | string | Y        | -                                           |
 | social_media | string | Y        | allowed value is **GOOGLE** or **FACEBOOK** |
 
+
  **Response**
 
  if user is registered, api will send access token, if not registered api will send **202**  http status code and send back your request body ,or response with error code if any input invalid.
 
-
-​     
 
 - ***[BASE_URL]/user/register***
 
@@ -100,7 +99,7 @@ I have been created simple backed (without login) to disable and enabled user, i
   
   | Name         | Type   | Required | Description                                                  |
   | ------------ | ------ | -------- | ------------------------------------------------------------ |
-  | phone_number | string | Y        | min 6 digit, max, 25 digit, allowed value between 1 - 9 or ٩ - ٠ , both combination and spaces are not allowed |
+  | phone_number | string | Y        | min 6 digit, max, 25 digit, allowed value between 1-9 **or** ٩-٠ , both combination and spaces are not allowed |
   | full_name    | string | Y        | min 3 max 100, combination Arabic and English allowed ( can be restricted if you want) |
   | email        | string | Y        | unique, min 3 max 100                                        |
   | age          | int    | Y        | min 1 max 125                                                |
